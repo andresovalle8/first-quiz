@@ -1,19 +1,16 @@
 def test_alchemy_combine():
 
-  assert alchemy_combine(
-    make_oven(),
-    ["lead", "mercury"],
-    5000
-  ) == "gold"
+    # Prueba para crear oro
+    oven = make_oven()
+    result = alchemy_combine(oven, ["lead", "mercury"], 5000)
+    assert result == "gold", f"Error: {result}"
 
-  assert alchemy_combine(
-    make_oven(),
-    ["water", "air"],
-    -100
-  ) == "snow"
+    # Prueba para crear nieve
+    oven = make_oven()
+    result = alchemy_combine(oven, ["water", "air"], -100)
+    assert result == "snow", f"Error: {result}"
 
-  assert alchemy_combine(
-    make_oven(),
-    ["cheese", "dough", "tomato"],
-    150
-  ) == "pizza"
+    # Prueba para crear pizza
+    oven = make_oven()
+    result = alchemy_combine(oven, ["cheese", "dough", "tomato"], 150)
+    assert result == "pizza", f"Error: {result}"
